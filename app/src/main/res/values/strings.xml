@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Security</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="_sim_sim_bind_info">"    绑定SIM卡后，当再次重启手机时，若SIM卡信息发生变化，手机卫士会自动发送报警短信给安全号码！"</string>
 </resources>
