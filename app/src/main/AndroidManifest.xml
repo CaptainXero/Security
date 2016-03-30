@@ -30,6 +30,7 @@
     <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
 
     <application
+        android:name="com.example.administrator.action.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,7 +55,15 @@
         <activity android:name=".ProcessManager" />
         <activity android:name=".FlowStatistics" />
         <activity android:name=".SeniorTools" />
-        <activity android:name=".Setting"></activity>
+        <activity android:name=".Setting" />
+        <activity android:name=".SetUpStep1" />
+        <activity android:name=".SetUpStep2" />
+        <activity android:name=".SetUpStep3" />
+
+        <receiver
+            android:name="com.example.administrator.reciever.BootCompleteReciever"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

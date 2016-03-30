@@ -13,7 +13,7 @@
             android:layout_height="160dp"
             android:background="#00BFFF">
             <ImageView
-                android:id="@+id/iv_top"
+                android:id="@+id/iv_step1_top"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_centerInParent="true"
@@ -75,7 +75,7 @@
                     android:drawablePadding="5dp"
                     android:drawableTop="@drawable/lock_screen_icon"
                     android:gravity="center"
-                    android:text="远程锁屏"
+                    android:text="     远程锁屏"
                     android:textColor="#00BFFF"/>
                 <TextView
                     style="@style/textview16sp"
@@ -84,7 +84,7 @@
                     android:drawablePadding="5dp"
                     android:drawableTop="@drawable/delete_data"
                     android:gravity="center"
-                    android:text="远程删除数据"
+                    android:text="     远程删除数据"
                     android:textColor="#00BFFF"/>
             </LinearLayout>
         </LinearLayout>

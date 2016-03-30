@@ -5,7 +5,62 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#00BFFF">
+            <ImageView
+                android:id="@+id/iv_step3_top"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/set_safephone_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_step3_top"
+                android:gravity="center"
+                android:text="选择安全联系人"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/et_inputPhoneNO"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:background="@drawable/coner_white_rec"
+                android:drawableLeft="@drawable/contact_et_left_icon"
+                android:inputType="phone"
+                android:hint="请输入安全号码"
+                android:textColorHint="#00BFFF"/>
+            <Button
+                android:id="@+id/bt_step3_addcontace"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/add"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="10"
+        android:background="#00BFFF"
+        android:gravity="center">
+        <include layout="@layout/setup_radiogroup"/>
     </LinearLayout>
 
 </LinearLayout>
