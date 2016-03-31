@@ -27,7 +27,7 @@
                 android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:text="  设置完成！"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textScaleX="1.1"/>
         </RelativeLayout>
         <RelativeLayout

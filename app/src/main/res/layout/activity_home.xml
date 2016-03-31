@@ -22,9 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="安全卫士保护您的手机"
-            android:textSize="17sp"
+            android:textSize="18sp"
             android:paddingTop="30dp"
-            android:textColor="#FF4040"
+            android:textColor="#00BFFF"
             android:textScaleX="1.1"
             android:typeface="normal"/>
     </LinearLayout>

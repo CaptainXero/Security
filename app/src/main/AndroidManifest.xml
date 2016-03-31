@@ -63,7 +63,36 @@
         <receiver
             android:name="com.example.administrator.reciever.BootCompleteReciever"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
+
+        <activity android:name=".SetUpStep4" />
+        <activity android:name=".ContactSelectActivity" />
+        <activity android:name=".LostFindActivity" />
+
+        <receiver
+            android:name="com.example.administrator.reciever.SmsLostFindReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="com.example.administrator.service.GPSLocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.example.administrator.reciever.MyDeviceAdminReceiver"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

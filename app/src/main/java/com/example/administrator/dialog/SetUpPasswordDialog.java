@@ -18,8 +18,8 @@ import org.w3c.dom.Text;
  */
 public class SetUpPasswordDialog extends Dialog implements android.view.View.OnClickListener{
     private TextView tv_title;
-    private EditText et_firstPwd;
-    private EditText et_secondPwd;
+    public EditText et_firstPwd;
+    public EditText et_secondPwd;
     private MyCallBack myCallBack;
     public SetUpPasswordDialog(Context context) {
         super(context, R.style.dialog_custom);
