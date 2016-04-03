@@ -1,12 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.security.AddBlackNumberActivity">
-
-</RelativeLayout>
+    android:orientation="vertical">
+    <include layout="@layout/titlebar"/>
+    <EditText
+        android:id="@+id/et_blacknumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/coner_white_rec"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF00FF"
+        android:hint="请输入黑名单号码"
+        android:gravity="center"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/et_blackname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF00FF"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/coner_white_rec"
+        android:hint="请输入名称"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="15dp">
+        <CheckBox
+            android:id="@+id/cb_blacknumber_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/checkbox_selector"
+            android:checked="true"
+            android:paddingLeft="40dp"
+            android:text="电话拦截"
+            android:textColor="#FF00FF"
+            android:textScaleX="1.1"
+            android:textSize="16sp"/>
+        <CheckBox
+            android:id="@+id/cb_blacknumber_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/checkbox_selector"
+            android:checked="true"
+            android:paddingLeft="40dp"
+            android:text="短信拦截"
+            android:textColor="#FF00FF"
+            android:textScaleX="1.1"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/bt_blacknumber"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/add_btn_selector_securityphone"/>
+    <Button
+        android:id="@+id/bt_fromcontact"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/add_fromcontact_btn_selector_securityphone"/>
+</LinearLayout>
