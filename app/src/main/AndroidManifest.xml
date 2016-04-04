@@ -48,7 +48,7 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AntiTheft" />
-        <activity android:name=".SecurityPhone" />
+        <activity android:name=".SecurityPhone"/>
         <activity android:name=".SofewareManager" />
         <activity android:name=".AntiVirus" />
         <activity android:name=".ClearCache" />
