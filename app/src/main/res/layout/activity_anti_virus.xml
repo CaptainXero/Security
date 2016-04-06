@@ -22,7 +22,7 @@
             android:textColor="#FFFFFF"/>
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/rl_addscanvirus"
+        android:id="@+id/rl_allscanvirus"
         android:layout_width="match_parent"
         android:layout_height="70dp">
         <ImageView
