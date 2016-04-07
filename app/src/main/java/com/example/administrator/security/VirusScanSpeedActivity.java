@@ -1,5 +1,6 @@
 package com.example.administrator.security;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageInfo;
@@ -47,6 +48,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
     private ScanVirusAdapter adapter;
     private List<ScanAppInfo> myScanAppInfos = new ArrayList<ScanAppInfo>();
     private SharedPreferences mysp;
+    private Context mcontext;
     private Handler myHandler = new Handler(){
         public void handleMessage(android.os.Message msg){
             switch (msg.what){
@@ -87,6 +89,8 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_virus_scan_speed);
+        Context context = this.getApplicationContext();
+        mcontext = context;
         pm = getPackageManager();
         mysp = getSharedPreferences("config", MODE_PRIVATE);
         initView();
@@ -101,7 +105,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
         myLeftView.setImageResource(R.drawable.back);
         myProcess = (TextView) findViewById(R.id.tv_scanprocess);
         myScanningListView = (ListView) findViewById(R.id.lv_scanapps);
-        myScanApp = (TextView) findViewById(R.id.tv_scan_appname);
+        myScanApp = (TextView) findViewById(R.id.tv_scanapp);
         cancleBtn = (Button) findViewById(R.id.bt_canclescan);
         cancleBtn.setOnClickListener(this);
         adapter = new ScanVirusAdapter(myScanAppInfos,this);
@@ -145,7 +149,8 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
                     }
                     String apkpath = info.applicationInfo.sourceDir;
                     String md5info = MD5Utils.getFileMD5(apkpath);
-                    String result = AntiVirusDao.checkVirus(md5info);
+//                    context = getApplicationContext();
+                    String result = AntiVirusDao.checkVirus(md5info,mcontext);
                     msg = Message.obtain();
                     msg.what = SCANNING;
                     ScanAppInfo scanAppInfo = new ScanAppInfo();

@@ -15,10 +15,14 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 public class AntiVirus extends AppCompatActivity implements View.OnClickListener{
     private TextView myLastTime;
     private SharedPreferences sp;
+    private static String DB_PATH ;
+    private static String DB_NAME = "antivirus.db";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,18 +45,23 @@ public class AntiVirus extends AppCompatActivity implements View.OnClickListener
         new Thread(){
             public void run(){
                 try{
-                    File file = new File(getFilesDir(),dbname);
-                    if(file.exists() && file.length()>0){
-                        Log.i("VirusScanActivity", "数据库已存在");
-                        return;
-                    }
+//                    File file = new File(getFilesDir(),dbname);
+//                    if(file.exists() && file.length()>0){
+//                        Log.i("VirusScanActivity", "数据库已存在");
+//                        return;
+//                    }
                     InputStream inputStream = getAssets().open(dbname);
-                    FileOutputStream outputStream = openFileOutput(dbname, MODE_PRIVATE);
+                    DB_PATH = "/data/data/com.example.administrator.security/databases/";
+                    String outFileName = DB_PATH + DB_NAME;
+                    OutputStream outputStream = new FileOutputStream(DB_PATH+DB_NAME);
+//                    FileOutputStream outputStream = openFileOutput(dbname, MODE_PRIVATE);
                     byte[] buffer = new byte[1024];
                     int len = 0;
-                    while ((len = inputStream.read(buffer))!=-1){
+                    while ((len = inputStream.read(buffer))>0){
                         outputStream.write(buffer,0,len);
                     }
+                    Log.i("test", "拷贝结束");
+                    outputStream.flush();
                     inputStream.close();
                     outputStream.close();
                 }catch (IOException e){
