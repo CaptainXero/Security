@@ -58,6 +58,7 @@ public class ClearCache extends AppCompatActivity implements View.OnClickListene
                   //ListView 更新
                   adapter.notifyDataSetChanged();
                   myCacheLV.setSelection(myCacheInfos.size());
+                  animation.start();
                   break;
               case FINISH:
                   //扫描结束，停止动画
@@ -118,7 +119,7 @@ public class ClearCache extends AppCompatActivity implements View.OnClickListene
                         e.printStackTrace();
                     }
                     Message msg = Message.obtain();
-                    msg.obj = info;//这里忘写了导致空指针异常
+                    msg.obj = info;//这里忘把对象放进pbj导致空指针异常
                     msg.what = SCANNING;
                     handler.sendMessage(msg);
                 }
@@ -159,6 +160,8 @@ public class ClearCache extends AppCompatActivity implements View.OnClickListene
                 if(cacheMemory>0){
                     //跳转到清理缓存界面Activity
                     Intent intent = new Intent(this,CleanCacheActivity.class);
+                    //把要清理的缓存大小传递到另一界面
+                    intent.putExtra("cacheMemory",cacheMemory);
                     startActivity(intent);
                     finish();
                 }
