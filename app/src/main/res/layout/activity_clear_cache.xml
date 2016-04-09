@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.security.ClearCache">
+    android:orientation="vertical">
+    <include layout="@layout/titlebar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#EE3B3B">
+        <ImageView
+            android:id="@+id/iv_clearcache_broom"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/broom_animation"/>
+        <TextView
+            android:id="@+id/tv_clearnow"
+            style="@style/textview12sp"
+            android:layout_width="150dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:maxLength="26"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/tv_clear_total"
+            style="@style/textview12sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:maxLength="20"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lv_clear_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10">
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <Button
+            android:id="@+id/bt_clear_cancle"
+            android:layout_width="312dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cleancache_btn_selector"
+            android:layout_gravity="center_horizontal"
+            android:enabled="false"/>
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

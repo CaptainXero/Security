@@ -115,7 +115,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".VirusScanSpeedActivity"></activity>
+        <activity android:name=".VirusScanSpeedActivity" />
+        <activity android:name=".CleanCacheActivity"></activity>
     </application>
 
 </manifest>
