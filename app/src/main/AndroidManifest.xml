@@ -116,7 +116,13 @@
         </receiver>
 
         <activity android:name=".VirusScanSpeedActivity" />
-        <activity android:name=".CleanCacheActivity"></activity>
+        <activity android:name=".CleanCacheActivity" />
+        <activity android:name=".ProcessManagerSettingActivity" />
+
+        <service
+            android:name="com.example.administrator.reciever.AutoKillProcessService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
