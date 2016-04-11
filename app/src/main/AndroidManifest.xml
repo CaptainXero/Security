@@ -122,7 +122,9 @@
         <service
             android:name="com.example.administrator.reciever.AutoKillProcessService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".TrafficMonitoringActivity"></activity>
     </application>
 
 </manifest>
