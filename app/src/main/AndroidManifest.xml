@@ -63,7 +63,12 @@
         <receiver
             android:name="com.example.administrator.reciever.BootCompleteReciever"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                </intent-filter>>
+            </receiver>
+
 
         <activity android:name=".SetUpStep4" />
         <activity android:name=".ContactSelectActivity" />
@@ -124,7 +129,12 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".TrafficMonitoringActivity"></activity>
+        <activity android:name=".TrafficMonitoringActivity" />
+
+        <service
+            android:name="com.example.administrator.service.TrafficMonitoringService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
