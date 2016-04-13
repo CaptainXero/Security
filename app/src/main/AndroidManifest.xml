@@ -65,10 +65,10 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                </intent-filter>>
-            </receiver>
-
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            >
+        </receiver>
 
         <activity android:name=".SetUpStep4" />
         <activity android:name=".ContactSelectActivity" />
@@ -134,7 +134,12 @@
         <service
             android:name="com.example.administrator.service.TrafficMonitoringService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".numLocationActivity" />
+        <activity android:name=".smsCopyActivity" />
+        <activity android:name=".smsBackActivity" />
+        <activity android:name=".appLockAvtivity"></activity>
     </application>
 
 </manifest>
