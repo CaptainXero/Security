@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.security.smsBackActivity">
+    xmlns:itcast="http://schemas.android.com/apk/res-auto"
+    android:background="#DBDBDB"
+    android:orientation="vertical">
+    <include layout="@layout/titlebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
 
-</RelativeLayout>
+        <com.example.administrator.action.MyCircleProgress
+            android:id="@+id/mcp_reducition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/smsbackup_buuton_bg"
+            android:gravity="center"
+            android:text="一键还原"
+            android:textColor="#00FA9A"
+            itcast:circleColor="#EE0000"
+            itcast:progressColor="#E8E8E8"/>
+    </LinearLayout>
+
+</LinearLayout>
