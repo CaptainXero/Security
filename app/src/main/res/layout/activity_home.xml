@@ -15,8 +15,8 @@
         android:gravity="center">
         <ImageView
             android:layout_width="100dp"
-            android:layout_height="107.5dp"
-            android:background="@drawable/superman"/>
+            android:layout_height="100dp"
+            android:background="@drawable/home1"/>
         <TextView
             android:id="@+id/tv_tip"
             android:layout_width="match_parent"
