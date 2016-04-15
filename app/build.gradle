@@ -28,8 +28,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile files('libs/xUtils-2.5.5.jar')
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
     compile files('libs/commons-codec-1.9.jar')
     compile files('libs/commons-codec-1.6.jar')
     compile files('libs/httpcomponents-client-4.2.5/lib/commons-codec-1.6.jar')
@@ -39,5 +37,10 @@ dependencies {
     compile files('libs/httpcomponents-client-4.2.5/lib/httpclient-cache-4.2.5.jar')
     compile files('libs/httpcomponents-client-4.2.5/lib/httpcore-4.2.4.jar')
     compile files('libs/RootTools.jar')
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
 }
+
+
 

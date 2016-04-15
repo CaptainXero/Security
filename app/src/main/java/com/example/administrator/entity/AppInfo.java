@@ -10,6 +10,7 @@ public class AppInfo {
     public Drawable icon;
     public String appName;
     public String apkpath;
+    public boolean isLock;
     public long appSize;
     public boolean isInRoom;
     public boolean isUserApp;

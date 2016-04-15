@@ -21,7 +21,7 @@
             android:text="一键还原"
             android:textColor="#00FA9A"
             itcast:circleColor="#EE0000"
-            itcast:progressColor="#E8E8E8"/>
+            itcast:progressColor="#0000FF"/>
     </LinearLayout>
 
 </LinearLayout>

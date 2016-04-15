@@ -139,7 +139,14 @@
         <activity android:name=".numLocationActivity" />
         <activity android:name=".smsCopyActivity" />
         <activity android:name=".smsBackActivity" />
-        <activity android:name=".appLockAvtivity"></activity>
+        <activity android:name=".appLockAvtivity" />
+
+        <service
+            android:name="com.example.administrator.service.AppLockService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".EnterPswActivity"></activity>
     </application>
 
 </manifest>
